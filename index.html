@@ -3,12 +3,14 @@
     <title>Swift and JS</title>
   </head>
   <body>
-    <button onclick="triggerSwiftFromJs('triggerBuyAction');">Click me to BUY!</button>
-    <button onclick="triggerSwiftFromJs('triggerTrialAction');">Click me TO TRY!</button>
+    <button onclick="triggerSwiftFromJs('triggerBuyAction');">BUY ME!</button>
+    <button onclick="triggerSwiftFromJs('triggerTrialAction');">TRY IT!</button>
     
     <script>
       function triggerSwiftFromJs(message) {
+        alert("Before "+message);
         window.webkit.messageHandlers.inovaFIT_jsHandler.postMessage(message);
+        alert("After "+message);
       }
       
     </script>

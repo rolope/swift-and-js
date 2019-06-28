@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Swift and JS</title>
+  </head>
+  <body>
+    <button onclick="triggerSwiftFromJs();">Click me!</button>
+    
+    <script>
+      function triggerSwiftFromJs() {
+        window.webkit.messageHandlers.jsHandler.postMessage("trigger from JS");
+      }
+    </script>
+  </body>
+</html>

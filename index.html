@@ -8,7 +8,7 @@
     
     <script>
       function triggerSwiftFromJs(message) {
-        if (window.webkit !== null) {
+        if (window.webkit !== undefined) {
             window.webkit.messageHandlers.inovaFIT_jsHandler.postMessage(message);
         }
       }

@@ -3,14 +3,16 @@
     <title>Swift and JS</title>
   </head>
   <body>
-    <button onclick="triggerSwiftFromJs('triggerBuyAction');">BUY ME!</button>
-    <button onclick="triggerSwiftFromJs('triggerTrialAction');">TRY IT!</button>
+    <button onclick="triggerSwiftFromJs('triggerBuyAction');">BUY ME BIATCH!</button>
+    <button onclick="triggerSwiftFromJs('triggerTrialAction');">TRY IT PUSSIFER!</button>
     
     <script>
       function triggerSwiftFromJs(message) {
-        alert("Before "+message);
-        window.webkit.messageHandlers.inovaFIT_jsHandler.postMessage(message);
-        alert("After "+message);
+        if window.webkit != undefined {
+          window.webkit.messageHandlers.inovaFIT_jsHandler.postMessage(message);
+        } else {
+          window.webkit.messageHandlers.inovaFIT_jsHandler.postMessage(message+"_undefined");
+        }
       }
       
     </script>
